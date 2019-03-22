@@ -1,4 +1,4 @@
-package se.cygni.multiproto;
+package se.cygni.multiproto.server;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

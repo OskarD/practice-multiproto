@@ -1,4 +1,4 @@
-package se.cygni.multiproto.controller;
+package se.cygni.multiproto.server.rest.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
