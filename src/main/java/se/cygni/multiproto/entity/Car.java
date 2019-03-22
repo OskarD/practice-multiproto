@@ -14,4 +14,11 @@ public class Car {
 		this.drivers = List.of("Oskar", "Erik");
 	}
 
+	@Override
+	public String toString() {
+		return "Car{" +
+				"name='" + name + '\'' +
+				", drivers=" + drivers +
+				'}';
+	}
 }

@@ -7,7 +7,7 @@ import se.cygni.multiproto.entity.Car;
 @RestController("/json")
 public class RESTController {
 
-	@RequestMapping()
+	@RequestMapping("/car/tesla")
 	public Car getCar() {
 		return new Car();
 	}
