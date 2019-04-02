@@ -10,8 +10,27 @@ public class Car {
 	public List<String> drivers;
 
 	public Car() {
-		this.name = "Tesla";
-		this.drivers = List.of("Oskar", "Erik");
+	}
+
+	public Car(String name, List<String> drivers) {
+		this.name = name;
+		this.drivers = drivers;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public List<String> getDrivers() {
+		return drivers;
+	}
+
+	public void setDrivers(List<String> drivers) {
+		this.drivers = drivers;
 	}
 
 	@Override

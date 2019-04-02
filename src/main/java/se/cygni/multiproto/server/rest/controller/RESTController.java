@@ -1,14 +1,16 @@
 package se.cygni.multiproto.server.rest.controller;
 
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import se.cygni.multiproto.entity.Car;
 
-@RestController("/json")
+import java.util.List;
+
+@RestController()
 public class RESTController {
 
-	@RequestMapping("/car/tesla")
+	@GetMapping("rest/car/tesla")
 	public Car getCar() {
-		return new Car();
+		return new Car("Tesla", List.of("Oskar", "Erik"));
 	}
 }

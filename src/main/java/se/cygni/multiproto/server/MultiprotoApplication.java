@@ -9,5 +9,4 @@ public class MultiprotoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(MultiprotoApplication.class, args);
 	}
-
 }

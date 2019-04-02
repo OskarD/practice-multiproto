@@ -5,10 +5,8 @@ import se.cygni.multiproto.entity.Car;
 
 public class RESTClient {
 	public static void main( String[] args ) {
-		final String uri = "http://localhost:8080/rest/car/tesla";
-
 		RestTemplate restTemplate = new RestTemplate();
-		Car car = restTemplate.getForObject(uri, Car.class);
+		Car car = restTemplate.getForObject("http://localhost:8080/rest/car/tesla", Car.class);
 
 		if (car == null) {
 			throw new RuntimeException("Car is null");
