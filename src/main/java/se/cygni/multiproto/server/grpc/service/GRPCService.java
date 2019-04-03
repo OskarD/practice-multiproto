@@ -26,4 +26,23 @@ public class GRPCService extends CarServiceGrpc.CarServiceImplBase {
 		// When you are done, you must call onCompleted.
 		responseObserver.onCompleted();
 	}
+
+	@Override
+	public void getCars(CarServiceOuterClass.CarsRequest request, StreamObserver<CarServiceOuterClass.CarResponse> streamObserver) {
+		// CarRequest has toString auto-generated.
+		System.out.println(request);
+
+		// You must use a builder to construct a new Protobuffer object
+		CarServiceOuterClass.CarResponse response = CarServiceOuterClass.CarResponse.newBuilder()
+				.setName("Tesla")
+				.addAllDrivers(List.of("Oskar", "Erik"))
+				.build();
+
+		streamObserver.onNext(response);
+		streamObserver.onNext(response);
+		streamObserver.onNext(response);
+
+		// When you are done, you must call onCompleted.
+		streamObserver.onCompleted();
+	}
 }

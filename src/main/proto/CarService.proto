@@ -4,6 +4,10 @@ package se.cygni.multiproto;
 message CarRequest {
 }
 
+message CarsRequest {
+    int32 amount = 1;
+}
+
 // Request payload
 message CarResponse {
     // Each message attribute is strongly typed.
@@ -23,4 +27,6 @@ message CarResponse {
 service CarService {
     // Define a RPC operation
     rpc getCar(CarRequest) returns (CarResponse);
+
+    rpc getCars(CarsRequest) returns (stream CarResponse);
 }
