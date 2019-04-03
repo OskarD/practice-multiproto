@@ -1,4 +1,4 @@
-package se.cygni.multiproto.server.grpc.service;
+package se.cygni.multiproto.server.grpc;
 
 import io.grpc.stub.StreamObserver;
 import org.lognet.springboot.grpc.GRpcService;
