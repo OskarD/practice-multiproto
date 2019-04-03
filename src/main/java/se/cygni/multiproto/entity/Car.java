@@ -1,9 +1,10 @@
 package se.cygni.multiproto.entity;
 
+import java.io.Serializable;
 import java.util.List;
 
 @SuppressWarnings("WeakerAccess")
-public class Car {
+public class Car implements Serializable {
 
 	public String name;
 
